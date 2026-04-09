@@ -16,14 +16,14 @@ function App() {
 
       <main className='main'>
         <Hero />
-        <Products/>
-        <Banner/>
+        <Products />
+        <Banner />
         <Categories />
         <StoryBanner />
         <FollowSection />
       </main>
 
-      <Footer/>
+      <Footer />
     </>
   );
 }
