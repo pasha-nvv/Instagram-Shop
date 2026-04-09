@@ -187,16 +187,19 @@ body {
   }
 
   .hero-content {
-    padding: 0 1rem 2.4rem;
+    padding: 0 1rem 3.3rem;
   }
 
   .h1__hero {
     max-width: 235px;
     font-size: 2rem;
     line-height: 1.15;
+    color: #ffffff;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.28);
   }
 
   .btn__hero {
+    margin-top: 0.5rem;
     padding: 0.55rem 1.5rem;
     font-size: 0.82rem;
   }
@@ -751,11 +754,15 @@ body {
   }
 
   .story-banner {
-    min-height: 220px;
+    min-height: 0;
+    background: transparent;
   }
 
   .story-banner__image {
-    height: auto;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
   }
 
   .story-banner__content {
