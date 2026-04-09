@@ -1,0 +1,705 @@
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white;
+  border: none;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.header {
+  margin: 1.5rem 0;
+  padding: 0 3.75rem 0 3.75rem;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img__logo {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.nav__header {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #404040;
+  border-inline-style: none;
+  flex-direction: row;
+  letter-spacing: 1.5px;
+}
+
+.img__inst {
+  width: 3rem;
+}
+
+.hero {
+  width: 100%;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: start;
+  position: relative;
+  color: white;
+}
+
+.hero-content {
+  width: 100%;
+  margin: 0 5rem 10rem 5rem;
+}
+
+.h1__hero {
+  font-family: serif;
+  margin: 0;
+  font-size: 5rem;
+  color: black;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.btn__hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: white;
+  color: black;
+  padding: 0.5rem 4.188rem 0.5rem 4.188rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.link__hero {
+  color: black;
+  text-decoration: none;
+}
+
+.products {
+  width: min(1240px, calc(100vw - 4rem));
+  margin: 0 auto;
+  padding: 2.25rem 0;
+}
+
+.products__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.h2__product {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1f1f1f;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.products__view-all {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: #5b5b5b;
+}
+
+.products-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.product-card {
+  flex: 0 0 392px;
+  width: 392px;
+  max-width: 392px;
+  min-width: 392px;
+}
+
+.product-card__image-wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 392 / 540;
+  overflow: hidden;
+  background: #f2f2f2;
+}
+
+.product-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card__image,
+.banner-card__image,
+.modiweek-card__image,
+.story-banner__image,
+.follow__image {
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.product-card__title {
+  margin: 0.6rem 0 0.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #232323;
+}
+
+.product-card__subtitle {
+  margin: 0 0 0.55rem;
+  font-size: 0.72rem;
+  color: #6d6d6d;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.product-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card__colors {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.product-card__dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+}
+
+.product-card__price {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #1f1f1f;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (max-width: 1260px) {
+  .product-card {
+    flex: 0 1 calc((100% - 1rem) / 2);
+    width: auto;
+    max-width: none;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  .product-card {
+    flex-basis: calc((100% - 1rem) / 2);
+    width: auto;
+    max-width: none;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .products {
+    padding: 2rem 1rem;
+  }
+
+  .product-card {
+    flex-basis: 100%;
+  }
+
+  .product-card__image-wrap {
+    height: 300px;
+  }
+}
+
+.banner {
+  width: min(1240px, calc(100vw - 4rem));
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+
+.banner__title {
+  text-align: start;
+  margin: 0 0 0.85rem;
+  font-size: 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1f1f1f;
+}
+
+.banner-grid {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+}
+
+.banner-column {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.banner-card {
+  position: relative;
+  overflow: visible;
+  background: transparent;
+}
+
+.banner-card__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 980px) {
+  .products {
+    width: calc(100vw - 3rem);
+    padding: 2rem 0;
+  }
+
+  .banner {
+    width: calc(100vw - 3rem);
+    padding: 1rem 0 2.5rem;
+  }
+
+  .banner-grid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .products {
+    width: calc(100vw - 2rem);
+    padding: 2rem 0;
+  }
+
+  .banner {
+    width: calc(100vw - 2rem);
+    padding: 1rem 0 2.5rem;
+  }
+
+  .banner-grid {
+    flex-direction: column;
+  }
+
+  .banner-column {
+    gap: 1rem;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.modiweek {
+  width: min(1240px, calc(100vw - 4rem));
+  margin: 0 auto;
+  padding: 0.6rem 0 2rem;
+  text-align: start;
+}
+
+.modiweek__top {
+  margin-bottom: 0.8rem;
+  text-align: start;
+}
+
+.modiweek__title {
+  margin: 0;
+  font-size: 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1f1f1f;
+}
+
+.modiweek__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.modiweek-card {
+  flex: 0 0 calc((100% - 3rem) / 4);
+  max-width: calc((100% - 3rem) / 4);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.modiweek-card__image-wrap {
+  width: 100%;
+  overflow: hidden;
+  background: #f2f2f2;
+}
+
+.modiweek-card__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.modiweek-card__meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.66rem;
+  color: #565656;
+}
+
+.modiweek-card__name {
+  margin: 0;
+  font-weight: 700;
+  color: #303030;
+}
+
+.story-banner {
+  position: relative;
+  width: min(1240px, calc(100vw - 4rem));
+  margin: 0 auto;
+  min-height: 430px;
+  overflow: hidden;
+  background: #f5f3ef;
+}
+
+.story-banner__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.story-banner__content {
+  position: absolute;
+  right: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  padding: 1.1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: left;
+}
+
+.story-banner__eyebrow {
+  margin: 0 0 0.35rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.72rem;
+  color: #7a7a7a;
+}
+
+.story-banner__title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.22rem;
+  color: #242424;
+}
+
+.story-banner__button {
+  margin-top: 0.65rem;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #1f1f1f;
+  font-size: 0.86rem;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+}
+
+.follow {
+  width: min(1240px, calc(100vw - 4rem));
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: start;
+}
+
+.follow__top {
+  margin-bottom: 0.8rem;
+  text-align: start;
+}
+
+.follow__title {
+  margin: 0;
+  font-size: 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1f1f1f;
+}
+
+.follow__layout {
+  display: flex;
+  align-items: stretch;
+  gap: 0.8rem;
+}
+
+.follow__side {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.follow__row {
+  display: flex;
+  gap: 0.8rem;
+  flex: 1 1 0;
+}
+
+.follow__item {
+  overflow: hidden;
+  background: #f4f4f4;
+  flex: 1 1 0;
+}
+
+.follow__item--lead {
+  flex: 0 0 calc(50% - 0.4rem);
+  min-height: 498px;
+}
+
+.follow__item--lead .follow__image {
+  object-position: center 8%;
+}
+
+.follow__item--small {
+  min-height: 245px;
+}
+
+.follow__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 14%;
+}
+
+.footer {
+  margin-top: 1.2rem;
+  background: #3f3f41;
+  color: #eaeaea;
+}
+
+.footer__content {
+  width: min(1240px, calc(100vw - 4rem));
+  margin: 0 auto;
+  padding: 1.6rem 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.footer__title {
+  margin: 0 0 0.7rem;
+  font-size: 0.9rem;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #f4f4f4;
+}
+
+.footer__form {
+  display: flex;
+  gap: 0.45rem;
+  max-width: 360px;
+}
+
+.footer__input {
+  flex: 1;
+  border: 1px solid #7a7a7a;
+  background: #4a4a4d;
+  color: #f3f3f3;
+  font-size: 0.72rem;
+  padding: 0.45rem 0.65rem;
+}
+
+.footer__button {
+  border: 1px solid #d1d1d1;
+  background: transparent;
+  color: #f3f3f3;
+  font-size: 0.72rem;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+}
+
+  .footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.4rem;
+    align-content: flex-start;
+    max-width: 220px;
+  }
+
+.footer__links a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.72rem;
+  color: #d6d6d6;
+  text-decoration: none;
+}
+
+.footer__bottom {
+  width: min(1240px, calc(100vw - 4rem));
+  margin: 0 auto;
+  padding: 0.8rem 0 1.1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copy {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.65rem;
+  color: #c9c9c9;
+}
+
+.footer__social {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.footer__social span {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 50%;
+  background: #f1f1f1;
+  opacity: 0.85;
+}
+
+@media (max-width: 980px) {
+  .modiweek,
+  .story-banner,
+  .follow,
+  .footer__content,
+  .footer__bottom {
+    width: calc(100vw - 3rem);
+  }
+
+  .modiweek__grid {
+    gap: 0.8rem;
+  }
+
+  .modiweek-card {
+    flex-basis: calc((100% - 0.8rem) / 2);
+    max-width: calc((100% - 0.8rem) / 2);
+  }
+
+  .follow__layout {
+    flex-direction: column;
+  }
+
+  .follow__side {
+    width: 100%;
+  }
+
+  .follow__item--lead {
+    flex-basis: auto;
+    min-height: 420px;
+  }
+
+  .follow__item--small {
+    min-height: 200px;
+  }
+
+  .footer__content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .modiweek,
+  .story-banner,
+  .follow,
+  .footer__content,
+  .footer__bottom {
+    width: calc(100vw - 2rem);
+  }
+
+  .modiweek {
+    padding: 0.2rem 0 1.6rem;
+  }
+
+  .modiweek__grid {
+    gap: 0.6rem;
+  }
+
+  .modiweek-card {
+    flex-basis: calc((100% - 0.6rem) / 2);
+    max-width: calc((100% - 0.6rem) / 2);
+  }
+
+  .story-banner {
+    min-height: 220px;
+  }
+
+  .story-banner__image {
+    height: auto;
+  }
+
+  .story-banner__content {
+    width: 210px;
+    right: 0.5rem;
+    padding: 0.6rem 0.7rem;
+  }
+
+  .story-banner__title {
+    font-size: 0.95rem;
+  }
+
+  .story-banner__button {
+    margin-top: 0.45rem;
+    font-size: 0.72rem;
+    padding: 0.35rem 0.85rem;
+  }
+
+  .follow {
+    padding: 1.4rem 0;
+  }
+
+  .follow__layout {
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .follow__side {
+    width: 100%;
+    gap: 0.55rem;
+  }
+
+  .follow__row {
+    gap: 0.55rem;
+  }
+
+  .follow__item--lead {
+    min-height: 300px;
+  }
+
+  .follow__item--small {
+    min-height: 150px;
+  }
+
+  .footer__bottom {
+    padding-bottom: 1.4rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+  }
+}
